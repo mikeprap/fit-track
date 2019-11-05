@@ -1,6 +1,6 @@
 import React from 'react'
-import API from "../../utils/API";
-import Card from '../../components/Card'
+import GetDiet from "../../utils/GetDiet";
+import Card from '../../components/Card/index'
 /*ToDo*/
 /**
  * Let's get some styling in here
@@ -9,18 +9,21 @@ import Card from '../../components/Card'
 /* This is a very simple component.. it probably doesn't need to be a smart component at this point but you never know what's goingto happen in the future */
 class ProtectedRoute extends React.Component {
 	state= {
-		image:""
+		image:"",
+		
 	}
 	componentDidMount() {
 		this.loadDiet();
 	  }
 	loadDiet = () => {
-		API.getDiet()
-		  .then(res =>
+		fetch("https://api.edamam.com/search?q=chicken&app_id=$8461c4d2&app_key=$9e1260eb6b88a84e3b538584b38b0ecc&from=0&to=3&calories=591-600&diet=low-carb&high-protein")
+		  .then(res =>{
+			return res.json()
+		  }).then (data =>{
 			this.setState({
-			  image: res.hits.recipe.image
+			  image: data.hits[0].recipe.image
 			})
-		  )
+		})
 		  .catch(err => console.log(err));
 	  };
 	
@@ -28,8 +31,7 @@ class ProtectedRoute extends React.Component {
 		return (
 			<div>
 			<Card image={this.state.image} />
-			<h3>This is a Protected Route, You must log in to see this page.</h3>,	
-			<h3>hello</h3>
+			
 			</div>
 		)
 	}

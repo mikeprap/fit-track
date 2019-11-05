@@ -1,13 +1,17 @@
 import React from "react";
 
-function Card({props}) {
+function Card(props) {
   return (
-  <div className="card"
+  <div className="card img-fluid"
   style={{
+    objectfit: "cover",
+    width: "14rem",
+    height: "300px",
     backgroundImage: props.image ? `url(${props.image})` : "none"
   }}>
-    {!props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
-
+    <div className="card-body">
+   <p>hello</p>
+   </div>
   </div>
   );
 }
