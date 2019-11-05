@@ -28,11 +28,11 @@ const AuthExample = () => (
       		<Nav className="App-header"/>
 			<Container>
 				<AuthButton/>
-				<ul style={listStyle}>
+				{/* <ul style={listStyle}>
 					<li><Link to="/public">Public Page</Link></li>
 					<li><Link to="/protected">Protected Page</Link></li>
 					<li><Link to="/register">Register a New User</Link></li>
-				</ul>
+				</ul> */}
 				<Switch>
 					<Route path="/public" component={PublicRoute}/>
 					<Route path="/login" component={Login}/>
@@ -59,7 +59,7 @@ const AuthButton = withRouter(({ history }) => (
 			</button>
 		</div>
 	) : (
-		<p>You are not logged in.</p>
+		<p></p>
 	)
 ))
 
