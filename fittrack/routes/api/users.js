@@ -15,6 +15,8 @@ router.route("/login")
 router.route("/logout")
   .get(usersController.logout);
 
+  router.route("/profile")
+
 
 // Matches with "/api/users/:id"
 
