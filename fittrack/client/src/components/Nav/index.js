@@ -43,10 +43,10 @@ class Nav extends Component {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-primary">
+                <a className="button is-primary" id="signUp" href="/register">
                   <strong>Sign up</strong>
                 </a>
-                <a className="button is-light">
+                <a className="button is-light" id="logIn" href="/protected">
                   Log in
                 </a>
               </div>
