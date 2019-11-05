@@ -10,7 +10,8 @@ import Card from '../../components/Card/index'
 class ProtectedRoute extends React.Component {
 	state= {
 		image:"",
-		
+		label:"",
+		ingredients:""
 	}
 	componentDidMount() {
 		this.loadDiet();
@@ -21,7 +22,10 @@ class ProtectedRoute extends React.Component {
 			return res.json()
 		  }).then (data =>{
 			this.setState({
-			  image: data.hits[0].recipe.image
+			  image: data.hits[0].recipe.image,
+			  label: data.hits[0].recipe.label,
+			  ingredients: data.hits[0].recipe.ingredientLines,
+
 			})
 		})
 		  .catch(err => console.log(err));
@@ -31,6 +35,8 @@ class ProtectedRoute extends React.Component {
 		return (
 			<div>
 			<Card image={this.state.image} />
+			<h1>{this.state.label}</h1>
+			<p>{this.state.ingredients}</p>
 			
 			</div>
 		)

@@ -5,7 +5,7 @@ function Card(props) {
   <div className="card img-fluid"
   style={{
     objectfit: "cover",
-    width: "14rem",
+    width: "18rem",
     height: "300px",
     backgroundImage: props.image ? `url(${props.image})` : "none"
   }}>
