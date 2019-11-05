@@ -1,17 +1,14 @@
 import React from "react";
 
-function Card({ icon, title, children }) {
+function Card({props}) {
   return (
-    <div className="card mt-4">
-      <div className="card-header">
-        <h3>
-          <strong>
-            <i className={`fa fa-${icon}`} aria-hidden="true" /> {title}
-          </strong>
-        </h3>
-      </div>
-      <div className="card-body">{children}</div>
-    </div>
+  <div className="card"
+  style={{
+    backgroundImage: props.image ? `url(${props.image})` : "none"
+  }}>
+    {!props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
+
+  </div>
   );
 }
 
