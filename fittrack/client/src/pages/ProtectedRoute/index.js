@@ -81,9 +81,12 @@ class ProtectedRoute extends React.Component {
 			<h1>{this.state.label}</h1>
 			<p>{this.state.ingredients}</p>
 			<br></br>
-			<Card2 image2 ={this.state.image2} />
-			<h1>{this.state.label2}</h1>
-			<p>{this.state.ingredients2}</p>
+			<Card2 
+			image2 ={this.state.image2} 
+			label2 ={this.state.label2}	 
+			ingredients2={this.state.ingredients2}/>
+			
+			
 			
 			</div>
 		)

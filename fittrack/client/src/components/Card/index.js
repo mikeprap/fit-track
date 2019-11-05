@@ -10,7 +10,7 @@ function Card(props) {
     backgroundImage: props.image ? `url(${props.image})` : "none"
   }}>
     <div className="card-body">
-   <p>hello</p>
+   
    </div>
   </div>
   );
