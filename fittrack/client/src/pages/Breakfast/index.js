@@ -8,6 +8,8 @@ import YouTube from 'react-youtube';
 import SideMenu from '../../components/Menu';
 import BreakfastCard from "../../components/BreakfastCard/index"
 import BreakfastCard1 from "../../components/BreakfastCard1/index"
+import Row from '../../components/Grid';
+import Col from '../../components/Grid'
 
 /*ToDo*/
 /**
@@ -88,22 +90,31 @@ class Breakfast extends React.Component {
 		return (
 			<div>
 				<div>
+                    <Row>
 				<SideMenu/>
+                </Row>
+                <Row>
+                    <Col>
 					<Card1 image1={this.state.image1}
 						label1={this.state.label1}
 						ingredients1={this.state.ingredients1} />
+                        </Col>
+                        <Col>
 					<BreakfastCard image={this.state.image}
 						label={this.state.label}
 						ingredients={this.state.ingredients} />
+                        </Col>
+                        <Col>
 						<BreakfastCard1 image={this.state.image2}
 						label={this.state.label2}
 						ingredients={this.state.ingredients2} />
+                        </Col>
 					
 
 
 
 					
-
+                    </Row>
 					
 
 				

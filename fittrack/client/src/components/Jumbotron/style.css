@@ -1,3 +1,6 @@
-.jumbotron {
-  padding: 100px;
+.hero {
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  display: flex;
 }
