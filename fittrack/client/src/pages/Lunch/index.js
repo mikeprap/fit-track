@@ -8,6 +8,8 @@ import YouTube from 'react-youtube';
 import SideMenu from '../../components/Menu';
 import Row from '../../components/Grid';
 import Col from '../../components/Grid';
+import LunchCard from '../../components/LunchCard/index'
+import LunchCard1 from '../../components/LunchCard1'
 
 /*ToDo*/
 /**
@@ -30,9 +32,9 @@ class ProtectedRoute extends React.Component {
 	}
 	componentDidMount() {
 		this.loadLunch();
-		this.loadBreakfast();
-		this.loadDinner();
-		this.loadVideo();
+		this.loadLunch1();
+		this.loadLunch2();
+		
 	}
 	
 	loadLunch = () => {
@@ -49,17 +51,39 @@ class ProtectedRoute extends React.Component {
 			})
 			.catch(err => console.log(err));
 	};
+	loadLunch1 = () => {
+		fetch("https://api.edamam.com/search?q=salmon&app_id=$8461c4d2&app_key=$9e1260eb6b88a84e3b538584b38b0ecc&from=0&to=20&calories=600&mealType=Lunch")
+			.then(res => {
+				return res.json()
+			}).then(data => {
+				this.setState({
+					image1: data.hits[17].recipe.image,
+					label1: data.hits[17].recipe.label,
+					ingredients1: data.hits[17].recipe.ingredientLines,
+
+				})
+			})
+			.catch(err => console.log(err));
+	};
+	loadLunch2 = () => {
+		fetch("https://api.edamam.com/search?q=salad&app_id=$8461c4d2&app_key=$9e1260eb6b88a84e3b538584b38b0ecc&from=0&to=20&calories=600&mealType=Lunch")
+			.then(res => {
+				return res.json()
+			}).then(data => {
+				this.setState({
+					image2: data.hits[2].recipe.image,
+					label2: data.hits[2].recipe.label,
+					ingredients2: data.hits[2].recipe.ingredientLines,
+
+				})
+			})
+			.catch(err => console.log(err));
+	};
 	
 
 
 	render() {
-		const opts = {
-			height: '390',
-			width: '640',
-			playerVars: { // https://developers.google.com/youtube/player_parameters
-				autoplay: 1
-			}
-		};
+		
 		return (
 			<div>
 				<div>
@@ -68,7 +92,7 @@ class ProtectedRoute extends React.Component {
 					</Row>
 					<Row>
 						<Col>
-							<Card1 image1={this.state.image1}
+							<LunchCard image1={this.state.image1}
 								label1={this.state.label1}
 								ingredients1={this.state.ingredients1} />
 
@@ -82,7 +106,7 @@ class ProtectedRoute extends React.Component {
 
 						<br></br>
 						<Col>
-							<Card2
+							<LunchCard1
 								image2={this.state.image2}
 								label2={this.state.label2}
 								ingredients2={this.state.ingredients2} />

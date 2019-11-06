@@ -1,7 +1,7 @@
 import React from "react";
-import "./style.css";
 
-function Card1(props) {
+
+function LunchCard1(props) {
     return (
         <div className="card">
             <img src= {props.image2}></img>
@@ -14,4 +14,4 @@ function Card1(props) {
         );
 }
 
-export default Card1;
+export default LunchCard1;
