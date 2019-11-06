@@ -49,6 +49,9 @@ class Nav extends Component {
                 <a className="button is-light" id="logIn" href="/protected">
                   Log in
                 </a>
+                <a className="button is-danger" id="logOut" href="/public">
+                  Log Out
+                </a>
               </div>
             </div>
           </div>
