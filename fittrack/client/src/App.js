@@ -14,6 +14,8 @@ import Register from "./components/Register";
 import {Container} from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import Home from "./pages/Home";
+import Breakfast from "./pages/Breakfast"
 import './App.css';
 
 //I want to add some basic inline styling here, even though we are bringing in styles
@@ -38,6 +40,8 @@ const AuthExample = () => (
 					<Route path="/login" component={Login}/>
 					<Route path="/register" component={Register}/>
 					<PrivateRoute path="/protected" component={ProtectedRoute}/>
+					<Route path="/home" component={Home}/>
+					<Route path="/breakfast" component={Breakfast}/>
 					{/* <Route component={NoMatch} /> */}
 				</Switch>
 			</Container>

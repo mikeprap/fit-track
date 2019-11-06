@@ -6,8 +6,6 @@ import Card2 from '../../components/Card2/index'
 import Jumbotron2 from '../../components/Jumbotron2';
 import YouTube from 'react-youtube';
 import SideMenu from '../../components/Menu';
-import Row from '../../components/Grid';
-import Col from '../../components/Grid';
 
 /*ToDo*/
 /**
@@ -15,7 +13,7 @@ import Col from '../../components/Grid';
  */
 
 /* This is a very simple component.. it probably doesn't need to be a smart component at this point but you never know what's goingto happen in the future */
-class ProtectedRoute extends React.Component {
+class Breakfast extends React.Component {
 	state = {
 		image: "",
 		label: "",
@@ -102,31 +100,23 @@ class ProtectedRoute extends React.Component {
 		return (
 			<div>
 				<div>
-					<Row>
-						<SideMenu />
-					</Row>
-					<Row>
-						<Col>
-							<Card1 image1={this.state.image1}
-								label1={this.state.label1}
-								ingredients1={this.state.ingredients1} />
+				<SideMenu/>
+					<Card1 image1={this.state.image1}
+						label1={this.state.label1}
+						ingredients1={this.state.ingredients1} />
 
-						</Col>
-						<br></br>
-						<Col>
-							<Card image={this.state.image}
-								label={this.state.label}
-								ingredients={this.state.ingredients} />
-						</Col>
 
-						<br></br>
-						<Col>
-							<Card2
-								image2={this.state.image2}
-								label2={this.state.label2}
-								ingredients2={this.state.ingredients2} />
-						</Col>
-					</Row>
+					<br></br>
+					<Card image={this.state.image}
+						label={this.state.label}
+						ingredients={this.state.ingredients} />
+
+
+					<br></br>
+					<Card2
+						image2={this.state.image2}
+						label2={this.state.label2}
+						ingredients2={this.state.ingredients2} />
 
 					<YouTube
 						videoId={this.state.video}
@@ -143,4 +133,4 @@ class ProtectedRoute extends React.Component {
 	}
 }
 
-export default ProtectedRoute
+export default Breakfast
