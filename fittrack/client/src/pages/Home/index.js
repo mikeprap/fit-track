@@ -44,7 +44,6 @@ class ProtectedRoute extends React.Component {
 	render() {
 		
 		return (
-			<div>
 				<div>
                     <Row>
 				<SideMenu/>
@@ -55,14 +54,23 @@ class ProtectedRoute extends React.Component {
 					
 
                 </Row>
+                <Row>
 					<Jumbotron2/>
+
+                    </Row>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
 
 				</div>
 
 
 
 
-			</div>
 		)
 	}
 }

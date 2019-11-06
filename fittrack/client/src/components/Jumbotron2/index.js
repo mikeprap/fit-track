@@ -3,7 +3,7 @@ import React from "react";
 
 
 function Jumbotron2() {
-  return (<section className="hero is-medium is-dark is-bold">
+  return (<section className="hero is-medium is-bold">
   <div className="hero-body">
     <div className="container">
       <h1 className="title">
