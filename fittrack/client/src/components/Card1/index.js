@@ -1,19 +1,17 @@
 import React from "react";
+import "./style.css";
 
 function Card1(props) {
-  return (
-  <div className="card img-fluid"
-  style={{
-    objectfit: "cover",
-    width: "18rem",
-    height: "300px",
-    backgroundImage: props.image1 ? `url(${props.image1})` : "none"
-  }}>
-    <div className="card-body">
-   
-   </div>
-  </div>
-  );
+    return (
+        <div className="card">
+            <img src= {props.image1}></img>
+          <div className="card-body">
+          <h5 className="card-title">{props.label1}</h5>
+          <p className="card-text">{props.ingredients1}</p>
+         </div>
+         
+        </div>
+        );
 }
 
 export default Card1;
