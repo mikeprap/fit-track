@@ -93,7 +93,7 @@ class ProtectedRoute extends React.Component {
 					</Row>
 					<Row>
 						<Col>
-							<Card1 image2={this.state.image2}
+							<Card2 image2={this.state.image2}
 								label2={this.state.label2}
 								ingredients2={this.state.ingredients2} />
 
