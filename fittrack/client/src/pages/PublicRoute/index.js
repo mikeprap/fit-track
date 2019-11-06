@@ -1,4 +1,7 @@
 import React from 'react'
+import Jumbotron from '../../components/Jumbotron'
+import Row from '../../components/Grid'
+
 /*ToDo*/
 /**
  * Let's get some styling in here
@@ -8,11 +11,9 @@ import React from 'react'
 class PublicRoute extends React.Component {
 	render() {
 		return (
-            <div>
-                <h3>This is a Public Page Here</h3>
-                <p>Anyone can see this content</p>
-                <h3>helloooooooo</h3>
-            </div>	
+            
+            <Jumbotron/>
+            
 		)
 	}
 }

@@ -6,8 +6,12 @@ import Card2 from '../../components/Card2/index'
 import Jumbotron2 from '../../components/Jumbotron2';
 import YouTube from 'react-youtube';
 import SideMenu from '../../components/Menu';
+
 import DinnerCard from '../../components/DinnerCard'
 import DinnerCard1 from '../../components/DinnerCard1'
+
+import Row from '../../components/Grid';
+
 
 /*ToDo*/
 /**
@@ -42,11 +46,17 @@ class ProtectedRoute extends React.Component {
 		return (
 			<div>
 				<div>
+                    <Row>
 				<SideMenu/>
+
 					
 
 					
 					
+
+                </Row>
+					<Jumbotron2/>
+
 				</div>
 
 
