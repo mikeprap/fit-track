@@ -76,9 +76,29 @@ class Breakfast extends React.Component {
 						ingredients1={this.state.ingredients1} />
 
 
+
 					
 
 					
+
+					<br></br>
+					<Card image={this.state.image}
+						label={this.state.label}
+						ingredients={this.state.ingredients} />
+
+
+					<br></br>
+					<Card2
+						image2={this.state.image2}
+						label2={this.state.label2}
+						ingredients2={this.state.ingredients2} />
+{/* 
+					<YouTube
+						videoId={this.state.video}
+						opts={opts}
+						onReady={this._onReady}
+					/> */}
+
 				</div>
 
 
