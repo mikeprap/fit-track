@@ -76,19 +76,19 @@ class ProtectedRoute extends React.Component {
 			})
 			.catch(err => console.log(err));
 	};
-	loadVideo = () => {
-		fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=absworkout&key=AIzaSyCbe0-7OsepLY88Fig1jKT6pfZuXiL2FAo")
-			.then(res => {
-				return res.json()
-			})
-			.then(res =>
-				this.setState({
-					video: res.items[2].id.videoId
-				})
-			)
+	// loadVideo = () => {
+	// 	// fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=absworkout&key=AIzaSyCbe0-7OsepLY88Fig1jKT6pfZuXiL2FAo")
+	// 		.then(res => {
+	// 			return res.json()
+	// 		})
+	// 		.then(res =>
+	// 			this.setState({
+	// 				video: res.items[2].id.videoId
+	// 			})
+	// 		)
 
 
-	}
+	// }
 
 
 	render() {
