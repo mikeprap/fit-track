@@ -9,6 +9,7 @@ import SideMenu from '../../components/Menu';
 import Row from '../../components/Grid';
 import Col from '../../components/Grid';
 
+
 /*ToDo*/
 /**
  * Let's get some styling in here
@@ -32,7 +33,7 @@ class ProtectedRoute extends React.Component {
 		this.loadLunch();
 		this.loadBreakfast();
 		this.loadDinner();
-		this.loadVideo();
+		// this.loadVideo();
 	}
 	loadDinner = () => {
 		fetch("https://api.edamam.com/search?q=tilapia&app_id=$8461c4d2&app_key=$9e1260eb6b88a84e3b538584b38b0ecc&from=0&to=5&calories=600&diet=low-fat&mealType=Dinner&diet=low-carb&yield=1")
