@@ -128,11 +128,11 @@ class ProtectedRoute extends React.Component {
 						</Col>
 					</Row>
 
-					{/* <YouTube
-						videoId={this.state.video}
-						opts={opts}
-						onReady={this._onReady}
-					/> */}
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
 				</div>
 
 

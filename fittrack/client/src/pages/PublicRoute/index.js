@@ -11,9 +11,18 @@ import Row from '../../components/Grid'
 class PublicRoute extends React.Component {
 	render() {
 		return (
-            
+            <div>
             <Jumbotron/>
-            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            </div>
 		)
 	}
 }

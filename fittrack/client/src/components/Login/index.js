@@ -45,7 +45,30 @@ class Login extends React.Component {
 		return (
 			<div>
 				<p></p>
+				<br></br>
 				<LoginForm onLogin={this.login} />
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				
 			</div>
 		)
 	}

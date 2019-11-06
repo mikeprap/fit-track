@@ -32,6 +32,16 @@ class Register extends React.Component {
 			<div>
 				{/* <h4>Register a New User</h4> */}
 				<RegisterForm onRegister={this.register} />
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
 			</div>
 		)
 	}

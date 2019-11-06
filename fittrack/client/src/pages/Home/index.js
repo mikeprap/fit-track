@@ -99,18 +99,25 @@ class ProtectedRoute extends React.Component {
 			}
 		};
 		return (
-			<div>
 				<div>
                     <Row>
 				<SideMenu/>
                 </Row>
+                <Row>
 					<Jumbotron2/>
+                    </Row>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
 				</div>
 
 
 
 
-			</div>
 		)
 	}
 }

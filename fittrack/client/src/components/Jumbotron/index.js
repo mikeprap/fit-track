@@ -3,7 +3,7 @@ import "./style.css";
 
 function Jumbotron() {
   return(
-  <section className="hero is-medium is-dark is-bold">
+  <section className="hero is-medium is-bold">
         <div className="hero-body">
           <div className="hero-container">
             <h1 className="title">
