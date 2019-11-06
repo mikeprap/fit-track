@@ -4,6 +4,8 @@ Col {
     border: red;
 }
 
-/* .row {
-    border: solid 2px red;
-} */
+.row {
+    padding: 5px;
+    margin: 1rem;
+    border: red;
+}
