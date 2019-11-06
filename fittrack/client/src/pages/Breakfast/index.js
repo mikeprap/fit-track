@@ -117,12 +117,12 @@ class Breakfast extends React.Component {
 						image2={this.state.image2}
 						label2={this.state.label2}
 						ingredients2={this.state.ingredients2} />
-
+{/* 
 					<YouTube
 						videoId={this.state.video}
 						opts={opts}
 						onReady={this._onReady}
-					/>
+					/> */}
 				</div>
 
 

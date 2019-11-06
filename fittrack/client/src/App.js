@@ -15,7 +15,10 @@ import {Container} from "./components/Grid";
 import PublicRoute from "./pages/PublicRoute";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import Home from "./pages/Home";
-import Breakfast from "./pages/Breakfast"
+import Breakfast from "./pages/Breakfast";
+import Lunch from "./pages/Lunch";
+import Dinner from "./pages/Dinner";
+import Workout from "./pages/Workout";
 import './App.css';
 
 //I want to add some basic inline styling here, even though we are bringing in styles
@@ -42,6 +45,9 @@ const AuthExample = () => (
 					<PrivateRoute path="/protected" component={ProtectedRoute}/>
 					<Route path="/home" component={Home}/>
 					<Route path="/breakfast" component={Breakfast}/>
+					<Route path="/lunch" component={Lunch}/>
+					<Route path="/dinner" component={Dinner}/>
+					<Route path="/workout" component={Workout}/>
 					{/* <Route component={NoMatch} /> */}
 				</Switch>
 			</Container>
