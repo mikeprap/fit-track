@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default {
     saveRecipe: function(recipeData) {
-        return axios.post("/api/recipe", recipeData);
+      console.log("API")
+        return axios.post("/api/users/recipe", recipeData);
       }
 }
