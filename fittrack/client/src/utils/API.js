@@ -6,5 +6,8 @@ export default {
     saveRecipe: function(recipeData) {
       console.log("API")
         return axios.post("/api/users/recipe", recipeData);
+      },
+      getRecipe: function() {
+        return axios.get("/api/users/recipe");
       }
 }

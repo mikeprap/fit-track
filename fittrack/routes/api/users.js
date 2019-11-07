@@ -19,6 +19,8 @@ router.route("/logout")
 
 router.route("/recipe")
   .post(usersController.newRecipe)
+router.route("/recipe")
+  .get(usersController.findAll)
  
   // db.Recipes.create(req.body).then(
   //   (response) => {

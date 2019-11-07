@@ -1,25 +1,42 @@
 import React from 'react'
 import API from "../../utils/API"
 import { Input, TextArea, FormBtn } from "../Form1";
+
+import Jumbotron from '../Jumbotron';
+import { Link } from "react-router-dom";
+
 import SideMenu from '../Menu';
 import Row from '../Grid'
 import './style.css'
 
 
+
 class RecipeForm extends React.Component {
     // refs
     state= {
+	recipe: [],
     name:"",
     recipeName:"",
     photo:"",
     ingredients:"",
     instructions:""
-    }
+	}
+	componentDidMount() {
+		this.loadRecipe();
+	  }
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({
           [name]: value
         });
+	  };
+	  loadRecipe = () => {
+		API.getRecipe()
+		  .then(res =>
+			this.setState({ recipe: res.data, name: "", recipeName: "", photo: "", ingredients: "",
+		instructions:"" })
+		  )
+		  .catch(err => console.log(err));
 	  };
 	  
       handleFormSubmit = event => {
@@ -35,7 +52,7 @@ class RecipeForm extends React.Component {
 			instructions: this.state.instructions
 		
 		  })
-		  	.then(data => console.log(data))
+		  	.then(data => this.loadrecipe())
 			.catch(err => console.log(err));
         
       };
@@ -130,6 +147,24 @@ class RecipeForm extends React.Component {
 				<br></br>
 				<br></br>
 			</form>
+			<jumbotron>
+			{this.state.recipe.length ? (
+              <list>
+                {this.state.recipe.map(recipe => (
+                  <li key={recipe._id}>
+                    <Link to={"/recipe/" + recipe._id}>
+                      <strong>
+                        {recipe.name} recipe {recipe.recipeName} {recipe.photo} {recipe.ingredients} {recipe.instructions}
+                      </strong>
+                    </Link>
+                    
+                  </li>
+                ))}
+              </list>
+            ) : (
+              <h3>No Results to Display</h3>
+            )}
+			</jumbotron>
             </div>
 
 		)
