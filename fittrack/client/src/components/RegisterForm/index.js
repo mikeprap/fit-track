@@ -30,8 +30,9 @@ class RegisterForm extends React.Component {
 					});
 				}}
 			>
+				<h1>Register as a New User</h1>
 				<div className="field">
-					<label className="label">name</label>
+					<label className="label">Username</label>
 					<div className="control">
 						<input className="input" ref={(input) => this.usernameElem = input} type='text' name="name" placeholder='Enter Username' />
 					</div>
