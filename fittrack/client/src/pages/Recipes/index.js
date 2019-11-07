@@ -76,7 +76,9 @@ class RecipePage extends React.Component {
 						key={recipe._id}
 						name={recipe.name}  
 						recipeName={recipe.recipeName}
-						photo={recipe.photo}
+                        photo={recipe.photo}
+                        ingredients={recipe.ingredients}
+                        instructions={recipe.instructions}
 					/>
 				))}
 				
