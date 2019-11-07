@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import SideMenu from '../Menu';
 import Row from '../Grid'
 import './style.css'
+import RecipeCard from '../RecipeCard'
+
 
 
 
@@ -147,25 +149,13 @@ class RecipeForm extends React.Component {
 				<br></br>
 				<br></br>
 			</form>
-			<jumbotron>
-			{this.state.recipe.length ? (
-              <list>
-                {this.state.recipe.map(recipe => (
-                  <li key={recipe._id}>
-                    <Link to={"/recipe/" + recipe._id}>
-                      <strong>
-                        {recipe.name} recipe {recipe.recipeName} {recipe.photo} {recipe.ingredients} {recipe.instructions}
-                      </strong>
-                    </Link>
-                    
-                  </li>
-                ))}
-              </list>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-			</jumbotron>
-            </div>
+			
+		
+				
+					
+				
+			
+        </div>
 
 		)
 	}
