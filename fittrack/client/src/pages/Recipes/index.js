@@ -66,6 +66,7 @@ class RecipePage extends React.Component {
 
         return (
             <div>
+
                 <Row>
                     <SideMenu />
                 </Row>
@@ -79,6 +80,8 @@ class RecipePage extends React.Component {
                                 name={recipe.name}
                                 recipeName={recipe.recipeName}
                                 photo={recipe.photo}
+                                ingredients={recipe.ingredients}
+                                instructions={recipe.instructions}
                             />
                         ))}
                     </Col>
@@ -88,6 +91,7 @@ class RecipePage extends React.Component {
 
         )
     }
+
 }
 
 export default RecipePage
