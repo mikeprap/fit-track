@@ -111,7 +111,8 @@ class RecipeForm extends React.Component {
 						placeholder='Enter Cooking Instructions' />
 					</div>
 				</div>
-				<FormBtn className="button is-rounded is-dark" onClick={this.handleFormSubmit} type='submit'>Submit</FormBtn>
+				<button className="button is-rounded is-dark" onClick={this.handleFormSubmit} type='submit'>Submit</button>
+				{/* <FormBtn className="button is-rounded is-dark" onClick={this.handleFormSubmit} type='submit'>Submit</FormBtn> */}
 				<br></br>
 				<br></br>
 				<br></br>
