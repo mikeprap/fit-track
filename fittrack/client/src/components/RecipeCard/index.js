@@ -3,6 +3,7 @@ import React from "react";
 
 function RecipeCard(props) {
   return (
+    <div className="column">
     <div className="card">
         <img src= {props.photo}></img>
       <div className="card-body">
@@ -11,7 +12,7 @@ function RecipeCard(props) {
       <p className="card-text">{props.ingredients}</p>
       <p className="card-text">{props.instructions}</p>
      </div>
-     
+     </div>
     </div>
     );
 }
