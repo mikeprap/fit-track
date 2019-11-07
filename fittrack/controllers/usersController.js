@@ -1,5 +1,6 @@
 const Account = require("../models/account");
 const passport = require('passport');
+const db = require ("../models/diet")
 
 module.exports = {
     getUser: function(req, res, next) {
@@ -57,8 +58,17 @@ module.exports = {
     test: function(req , res, next){
         console.log(`Ping Dinger ${req.statusCode}`);
 		res.status(200).send("Dong!");
-	}
-	
+	},
+	newRecipe: function(req, res){
+        db.Recipes
+        .create(req.body)
+        .then(function(dbModel){
+            res.json(dbModel)
+        })
+        .catch(function(err){
+            res.json(err)
+        })
+    }
 	
 
 };

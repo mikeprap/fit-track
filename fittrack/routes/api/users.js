@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const passport = require('passport');
 const usersController = require("../../controllers/usersController");
+const dietController = require("../../controllers/dietController")
 // Matches with "/api/users"
 router.route("/")
   .get(usersController.getUser);
@@ -15,7 +16,8 @@ router.route("/login")
 router.route("/logout")
   .get(usersController.logout);
 
-  router.route("/profile")
+router.route("/recipe")
+  .post(usersController.newRecipe)
 
 
 // Matches with "/api/users/:id"
