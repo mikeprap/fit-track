@@ -22,6 +22,7 @@ import Workout from "./pages/Workout";
 import Recipe from "./components/Recipe"
 import './App.css';
 import RecipeForm from './components/RecipeForm';
+import Recipes from "./pages/Recipes";
 
 //I want to add some basic inline styling here, even though we are bringing in styles
 const listStyle = {
@@ -51,6 +52,7 @@ const AuthExample = () => (
 					<Route path="/dinner" component={Dinner}/>
 					<Route path="/workout" component={Workout}/>
 					<Route path="/recipe" component={RecipeForm}/>
+					<Route path="/recipes" component={Recipes}/>
 					{/* <Route component={NoMatch} /> */}
 				</Switch>
 			</Container>

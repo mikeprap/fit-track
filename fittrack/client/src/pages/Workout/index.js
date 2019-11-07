@@ -72,7 +72,19 @@ class ProtectedRoute extends React.Component {
 					/> 
 				</div>
 
-
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
 
 
 			</div>
