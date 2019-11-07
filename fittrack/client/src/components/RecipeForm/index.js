@@ -1,6 +1,9 @@
 import React from 'react'
 import API from "../../utils/API"
 import { Input, TextArea, FormBtn } from "../Form1";
+import SideMenu from '../Menu';
+import Row from '../Grid'
+import './style.css'
 
 
 class RecipeForm extends React.Component {
@@ -42,6 +45,9 @@ class RecipeForm extends React.Component {
 
 		return (
             <div>
+				<Row>
+				<SideMenu/>
+				</Row>
 			<form>
 				
 			
@@ -90,7 +96,7 @@ class RecipeForm extends React.Component {
 						onChange={this.handleInputChange} 
 						type='text' 
 						name="ingredients" 
-						placeholder='Enter Your Height' />
+						placeholder='Enter The Ingredients For Your Recipe' />
 					</div>
 				</div>
 				<div className="field">
@@ -102,11 +108,26 @@ class RecipeForm extends React.Component {
 						onChange={this.handleInputChange} 
 						type='text' 
 						name="instructions" 
-						placeholder='Put instructions here' />
+						placeholder='Enter Cooking Instructions' />
 					</div>
 				</div>
-				<FormBtn className="button is-rounded is-dark" onClick={this.handleFormSubmit} type='submit'Submit/>
-				
+				<FormBtn className="button is-rounded is-dark" onClick={this.handleFormSubmit} type='submit'>Submit</FormBtn>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
 			</form>
             </div>
 

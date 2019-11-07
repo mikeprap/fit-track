@@ -12,6 +12,7 @@ function SideMenu() {
                 <li><a href="/dinner">Dinner</a></li>
                 <li><a href="/workout">Workouts</a></li>
                 <li><a href="/recipe">New Recipe</a></li>
+                <li><a href="/recipes">Recipes</a></li>
             </ul>
         </div>
     );
