@@ -1,6 +1,6 @@
 const Account = require("../models/account");
 const passport = require('passport');
-const db = require ("../models/diet")
+const db = require ("../models")
 
 module.exports = {
     getUser: function(req, res, next) {
@@ -60,7 +60,9 @@ module.exports = {
 		res.status(200).send("Dong!");
 	},
 	newRecipe: function(req, res){
-        db.Recipes
+        console.log("Back end")
+        console.log(req.body)
+        db.Recipe
         .create(req.body)
         .then(function(dbModel){
             res.json(dbModel)

@@ -19,8 +19,9 @@ import Breakfast from "./pages/Breakfast";
 import Lunch from "./pages/Lunch";
 import Dinner from "./pages/Dinner";
 import Workout from "./pages/Workout";
-import RecipeForm from "./components/RecipeForm"
+import Recipe from "./components/Recipe"
 import './App.css';
+import RecipeForm from './components/RecipeForm';
 
 //I want to add some basic inline styling here, even though we are bringing in styles
 const listStyle = {

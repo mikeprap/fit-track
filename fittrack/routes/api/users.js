@@ -2,6 +2,7 @@ const router = require("express").Router();
 const passport = require('passport');
 const usersController = require("../../controllers/usersController");
 const dietController = require("../../controllers/dietController")
+const db = require("../../models")
 // Matches with "/api/users"
 router.route("/")
   .get(usersController.getUser);
@@ -18,6 +19,19 @@ router.route("/logout")
 
 router.route("/recipe")
   .post(usersController.newRecipe)
+ 
+  // db.Recipes.create(req.body).then(
+  //   (response) => {
+  //     res.json({succssful: response})
+  //     console.log(response)
+  //   }
+  // ).catch(
+  //   (err) => {
+  //     res.json({error: err})
+  //   }
+  // )
+
+  
 
 
 // Matches with "/api/users/:id"
