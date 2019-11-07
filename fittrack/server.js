@@ -58,6 +58,7 @@ mongoose.connect('mongodb://localhost/mern_authenticate_me',{ useNewUrlParser: t
 
 /* === Error Handling === */
 
+
 /* Development error handler will print stacktrace */
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {

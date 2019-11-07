@@ -19,6 +19,7 @@ import Breakfast from "./pages/Breakfast";
 import Lunch from "./pages/Lunch";
 import Dinner from "./pages/Dinner";
 import Workout from "./pages/Workout";
+import RecipeForm from "./components/RecipeForm"
 import './App.css';
 
 //I want to add some basic inline styling here, even though we are bringing in styles
@@ -48,6 +49,7 @@ const AuthExample = () => (
 					<Route path="/lunch" component={Lunch}/>
 					<Route path="/dinner" component={Dinner}/>
 					<Route path="/workout" component={Workout}/>
+					<Route path="/recipe" component={RecipeForm}/>
 					{/* <Route component={NoMatch} /> */}
 				</Switch>
 			</Container>

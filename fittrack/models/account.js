@@ -7,7 +7,8 @@ const Account = new Schema({
     password: String,
     age: Number,
     weight: Number,
-    height: Number
+    height: Number,
+    
 });
 
 Account.plugin(passportLocalMongoose);
